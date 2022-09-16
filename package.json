@@ -1,0 +1,35 @@
+{
+  "name": "auth-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "rimraf .next && next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "format": "npx prettier --write ."
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.8.4",
+    "@unocss/preset-uno": "^0.45.6",
+    "@unocss/webpack": "^0.45.6",
+    "axios": "^0.27.2",
+    "next": "12.2.5",
+    "pino": "^8.4.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-redux": "^8.0.2",
+    "rimraf": "^3.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "18.7.2",
+    "@types/react": "18.0.17",
+    "@types/react-dom": "18.0.6",
+    "@unocss/cli": "^0.45.6",
+    "eslint": "8.21.0",
+    "eslint-config-next": "12.2.5",
+    "prettier": "2.7.1",
+    "sass": "^1.54.4",
+    "typescript": "4.7.4"
+  }
+}

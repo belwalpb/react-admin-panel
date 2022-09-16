@@ -1,0 +1,94 @@
+.orange-btn {
+  border: 1px solid #ff9800;
+  background-color: #ffcd83 !important;
+  color: black;
+  border-radius: 6px;
+  box-shadow: 3px 3px 6px #b8b9be, -3px -3px 6px #fff;
+}
+
+.white-btn {
+  border: 1px solid #e5ded1;
+  background-color: #fafafa !important;
+  color: black;
+  border-radius: 6px;
+  box-shadow: 3px 3px 6px #b8b9be, -3px -3px 6px #fff;
+}
+
+//Header
+.header-container {
+  box-shadow: 0 5px 5px -5px black;
+}
+@media only screen and (min-width: 800px) {
+  .header-container {
+    justify-content: space-evenly;
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+}
+
+.header-logo {
+  width: 70px;
+  aspect-ratio: 310/200;
+}
+
+// Login Box
+.login-box {
+  border: none;
+  min-width: 300px;
+  box-shadow: 0 9px 16px 0 rgba(235, 171, 52, 0.2);
+}
+
+.text-input {
+  margin-bottom: 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  height: 42px;
+}
+
+.input-label {
+  display: inline-block;
+  color: #091e42;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+}
+
+.validation-error {
+  font-size: 12px;
+  color: #f34235;
+}
+
+.small-link {
+  cursor: pointer;
+  color: #ff9800;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.or-section {
+  width: 95%;
+  margin: 25px 0 12px 0.75rem;
+  border-top: 1px solid #cecece;
+}
+
+.or-text {
+  color: #8993a4;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  padding: 4px;
+  top: -13px;
+  left: 50%;
+  background: #fff;
+  margin: 0 0 0 -16px;
+  position: relative;
+}
+
+.social-btn {
+  margin-right: 0 !important;
+  margin-bottom: 5px;
+  border-radius: 20px;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 36%);
+  height: 40px;
+  width: auto !important;
+}

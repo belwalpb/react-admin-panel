@@ -1,0 +1,32 @@
+@font-face {
+  font-family: "Euclid Circular A";
+  src: url("../assets/fonts/EuclidCircularA-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../assets/fonts/EuclidCircularA-Regular.woff2") format("woff2"),
+    url("../assets/fonts/EuclidCircularA-Regular.woff") format("woff"),
+    url("../assets/fonts/EuclidCircularA-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+html,
+* {
+  font-family: "Euclid Circular A", Roboto, Helvetica, Arial, sans-serif !important;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+  background-color: #fafafa;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}

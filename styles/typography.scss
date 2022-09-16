@@ -1,0 +1,184 @@
+html {
+  font-size: 100%;
+}
+
+/*
+font-size = min-font-size +[ ( (current-vw - min-vw)/(max-vw - min-vw) ) * (max-font-size - min-font-size) ]
+*/
+
+// For Calculating the font-sizes on different devices
+@mixin calc-font-size($min-vw, $max-vw, $min-font-size, $max-font-size) {
+  font-size: calc(
+    #{$min-font-size}rem + ((100vw - #{$min-vw}rem) / (#{$max-vw} - #{$min-vw})) *
+      (#{$max-font-size} - #{$min-font-size})
+  );
+}
+
+@mixin calc-line-height($min-vw, $max-vw, $min-font-size, $max-font-size) {
+  line-height: calc(
+    (
+        #{$min-font-size}rem +
+          ((100vw - #{$min-vw}rem) / (#{$max-vw} - #{$min-vw})) *
+          (#{$max-font-size} - #{$min-font-size})
+      ) * 1.2
+  );
+}
+
+// Heading H1
+$h1-base-size: 1.75;
+$h1-max-size: 2.3;
+h1 {
+  font-size: $h1-base-size + rem;
+  line-height: $h1-base-size + rem;
+}
+
+@media (min-width: 414px) {
+  h1 {
+    @include calc-font-size(25.875, 90, $h1-base-size, $h1-max-size);
+    @include calc-line-height(25.875, 90, $h1-base-size, $h1-max-size);
+  }
+}
+
+@media (min-width: 1440px) {
+  h1 {
+    font-size: $h1-max-size + rem;
+    line-height: $h1-max-size + rem;
+  }
+}
+
+// Heading H2
+$h2-base-size: 1.65;
+$h2-max-size: 2.2;
+h2 {
+  font-size: $h2-base-size + rem;
+  line-height: $h2-base-size + rem;
+}
+
+@media (min-width: 414px) {
+  h2 {
+    @include calc-font-size(25.875, 90, $h2-base-size, $h2-max-size);
+    @include calc-line-height(25.875, 90, $h2-base-size, $h2-max-size);
+  }
+}
+
+@media (min-width: 1440px) {
+  h2 {
+    font-size: $h2-max-size + rem;
+    line-height: $h2-max-size + rem;
+  }
+}
+
+// Heading H3
+$h3-base-size: 1.5;
+$h3-max-size: 2;
+h3 {
+  font-size: $h3-base-size + rem;
+  line-height: $h3-base-size + rem;
+}
+
+@media (min-width: 414px) {
+  h3 {
+    @include calc-font-size(25.875, 90, $h3-base-size, $h3-max-size);
+    @include calc-line-height(25.875, 90, $h3-base-size, $h3-max-size);
+  }
+}
+
+@media (min-width: 1440px) {
+  h3 {
+    font-size: $h3-max-size + rem;
+    line-height: $h3-max-size + rem;
+  }
+}
+
+// Heading H4
+$h4-base-size: 1.35;
+$h4-max-size: 1.75;
+h4 {
+  font-size: $h4-base-size + rem;
+  line-height: $h4-base-size + rem;
+}
+
+@media (min-width: 414px) {
+  h4 {
+    @include calc-font-size(25.875, 90, $h4-base-size, $h4-max-size);
+    @include calc-line-height(25.875, 90, $h4-base-size, $h4-max-size);
+  }
+}
+
+@media (min-width: 1440px) {
+  h4 {
+    font-size: $h4-max-size + rem;
+    line-height: $h4-max-size + rem;
+  }
+}
+
+// Heading H5
+$h5-base-size: 1.2;
+$h5-max-size: 1.6;
+h5 {
+  font-size: $h5-base-size + rem;
+  line-height: $h5-base-size + rem;
+}
+
+@media (min-width: 414px) {
+  h5 {
+    @include calc-font-size(25.875, 90, $h5-base-size, $h5-max-size);
+    @include calc-line-height(25.875, 90, $h5-base-size, $h5-max-size);
+  }
+}
+
+@media (min-width: 1440px) {
+  h5 {
+    font-size: $h5-max-size + rem;
+    line-height: $h5-max-size + rem;
+  }
+}
+
+// Heading H6
+$h6-base-size: 1;
+$h6-max-size: 1.3;
+h6 {
+  font-size: $h6-base-size + rem;
+  line-height: $h6-base-size + rem;
+}
+
+@media (min-width: 414px) {
+  h6 {
+    @include calc-font-size(25.875, 90, $h6-base-size, $h6-max-size);
+    @include calc-line-height(25.875, 90, $h6-base-size, $h6-max-size);
+  }
+}
+
+@media (min-width: 1440px) {
+  h6 {
+    font-size: $h6-max-size + rem;
+    line-height: $h6-max-size + rem;
+  }
+}
+
+@mixin calc-font-size-for-p($min-vw, $max-vw, $min-font-size, $max-font-size) {
+  font-size: calc(
+    #{$max-font-size}rem - ((100vw - #{$min-vw}rem) / (#{$max-vw} - #{$min-vw})) *
+      (#{$max-font-size} - #{$min-font-size})
+  );
+}
+
+$p-base-size: 1.1;
+$p-max-size: 1.16;
+
+// Paragraph List
+p,
+ul,
+li {
+  @include calc-font-size-for-p(25.875, 90, $p-base-size, $p-max-size);
+  line-height: 1.85rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: unset;
+}
